@@ -13,13 +13,20 @@ public class DisplayActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display);
 
+        // set ActionBar title in code.
+        Log.i(TAG, "Title: " + this.getTitle().toString());
+        Log.i(TAG, "ActionBar Title: " + getSupportActionBar().getTitle().toString());
+        getSupportActionBar().setTitle(this.getLocalClassName().toString());
+        Log.i(TAG, "Title: " + this.getTitle().toString());
+        Log.i(TAG, "ActionBar Title: " + getSupportActionBar().getTitle().toString());
+
         TextView text = (TextView) findViewById(R.id.text_view);
 
         String message = getIntent().getStringExtra(MyActivity.EXTRA_MESSAGE);
         text.setText(message);
-        Log.d(TAG, "Default text size is: " + text.getTextSize());
+        Log.i(TAG, "Default text size is: " + text.getTextSize());
         text.setTextSize(40);
-        Log.d(TAG, "Current text size is: " + text.getTextSize());
+        Log.i(TAG, "Current text size is: " + text.getTextSize());
         // getTextSize()'s value is larger than current value, why ?
 //        float size = text.getTextSize();
 //        text.setTextSize(size);
