@@ -18,18 +18,17 @@
         app:layout_constraintRight_toRightOf="@+id/constraintLayout"
         app:layout_constraintTop_toTopOf="@+id/constraintLayout"
         app:layout_constraintDimensionRatio="16:9"
-        app:layout_constraintVertical_bias="0.166" />
+        app:layout_constraintVertical_bias="0.153"
+        app:layout_constraintHorizontal_bias="0.714" />
 
-    <ImageView
-        android:layout_width="0dp"
-        android:layout_height="200dp"
-        android:background="@color/colorAccent"
-        android:contentDescription="@null"
-        android:src="@mipmap/total_large"
-        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
-        app:layout_constraintDimensionRatio="4:3"
-        app:layout_constraintLeft_toLeftOf="@+id/constraintLayout"
-        app:layout_constraintRight_toRightOf="@+id/constraintLayout"
-        android:layout_marginBottom="57dp" />
+    <TextView
+        android:id="@+id/text_view"
+        android:textColor="@color/red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintLeft_toLeftOf="@id/constraintLayout"
+        app:layout_constraintRight_toRightOf="@id/constraintLayout"
+        app:layout_constraintBottom_toBottomOf="@id/constraintLayout"/>
 
 </android.support.constraint.ConstraintLayout>

@@ -12,9 +12,13 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.EditText;
+
+import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
 public class MyActivity extends AppCompatActivity {
     private final static String TAG = "ElevenButtonLayout";
+    public final static String EXTRA_MESSAGE = "com.htc.eleven.myfirstapp.message";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,9 +47,15 @@ public class MyActivity extends AppCompatActivity {
                 Log.d(TAG, "I am on clicked now !");
 
                 Intent intent = new Intent(MyActivity.this, DisplayActivity.class);
+
+                EditText text =  (EditText) findViewById(R.id.edit_message);
+                String message = text.getText().toString();
+                intent.putExtra(EXTRA_MESSAGE, message);
                 startActivity(intent);
             }
         });
+
+
     }
 
     @Override
