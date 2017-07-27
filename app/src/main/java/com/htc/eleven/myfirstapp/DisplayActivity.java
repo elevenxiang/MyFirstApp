@@ -13,7 +13,7 @@ public class DisplayActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display);
 
-        // set ActionBar title in code.
+        //set ActionBar title in code.
         Log.i(TAG, "Title: " + this.getTitle().toString());
         Log.i(TAG, "ActionBar Title: " + getSupportActionBar().getTitle().toString());
         getSupportActionBar().setTitle(this.getLocalClassName().toString());
